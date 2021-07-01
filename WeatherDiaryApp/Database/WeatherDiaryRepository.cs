@@ -97,7 +97,7 @@ namespace Database
                     (!uc.DateEnd.HasValue || uc.DateEnd.Value >= date));
             if (userCity is null)
             {
-                return new List<Common.WeatherRecord>();
+                return null;
             }
             return userCity.City.WeatherRecords
                 .Where(wr =>
